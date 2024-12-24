@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diet Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/FAQs">FAQs</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <h1>Personalized Diet Information</h1>
+    
+    <form action="/recommend" method="POST">
+        Age: <input type="text" name="age" required><br><br>
+        Weight (kg): <input type="text" name="weight" required><br><br>
+        Height (cm): <input type="text" name="height" required><br><br>
+        Gender:
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        Activity Level:
+        <select name="activity_level">
+            <option value="sedentary">Sedentary</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="intense">Intense</option>
+            <option value="very_intense">Very Intense</option>
+        </select><br><br>
+        Diet Preference:
+        <select name="diet_preference">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+        </select><br><br>
+        Diet Goal:
+        <select name="diet_goal">
+            <option value="muscle gain">Muscle Gain</option>
+            <option value="weight loss">Weight Loss</option>
+            <option value="maintain">Maintain</option>
+        </select><br><br>
+        <input type="submit" value="Get Recommendation">
+    </form>
+
+    {% if calories %}
+        <h2>Recommended Calorie Intake: {{ calories }} kcal</h2>
+        <h3>Recommended Diet Plan:</h3>
+        <ul>
+            <li>Breakfast: {{ meal_plan['breakfast'] }}</li>
+            <li>Lunch: {{ meal_plan['lunch'] }}</li>
+            <li>Dinner: {{ meal_plan['dinner'] }}</li>
+            <li>Snacks: {{ meal_plan['snack'] }}</li>
+        </ul>
+    {% endif %}
+
+   <!-- Footer -->
+   <footer>
+    <p>&copy; 2024 Diet Recommendation System</p>
+</footer>
+
+</body>
+</html>

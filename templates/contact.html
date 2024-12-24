@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/FAQs">FAQs</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <h1>Contact Us</h1>
+    <p>We would love to hear from you! Feel free to reach out for any queries or feedback.</p>
+
+    <form action="/contact" method="POST">  
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    max-width: 600px;
+                    margin: 50px auto;
+                    background-color: #fff;
+                    padding: 30px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+                .contact-info {
+                    margin-top: 20px;
+                }
+                .contact-info p {
+                    font-size: 18px;
+                    margin: 10px 0;
+                }
+                .contact-info strong {
+                    font-weight: bold;
+                }
+                .contact-info a {
+                    color: #007BFF;
+                    text-decoration: none;
+                }
+                .contact-info a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Contact Us</h1>
+                
+                <div class="contact-info">
+                    <p><strong>Phone Number:</strong> <a href="tel:+1234567890">+1 (234) 567-890 </a></p>
+                    <p><strong>Email Address:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+                </div>
+            </div>
+
+        <!-- <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <input type="submit" value="Submit"> -->
+
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Diet Recommendation System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
